@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  font-family: 'JetBrains Mono', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #fffbfb; /* Dracula foreground */
+  background-color: #232323; /* Dracula background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #bd93f9; /* Dracula purple */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #ff79c6; /* Dracula pink */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: start;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #212123; /* Dracula background */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #f1fa8c; /* Dracula yellow */
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #44475a; /* Dracula selection background */
+  color: #f8f8f2; /* Dracula foreground */
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+  border-color: #ff79c6; /* Dracula pink */
+  background-color: #6272a4; /* Dracula comment */
+}
+button:focus,
+button:focus-visible {
+  outline: 2px solid #8be9fd; /* Dracula cyan */
+}
+
+.card {
+  padding: 2em;
+  background-color: #44475a; /* Dracula selection */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: #f8f8f2; /* Dracula foreground */
+}

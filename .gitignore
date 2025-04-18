@@ -1,0 +1,41 @@
+# Binary files
+# These patterns apply recursively (in root and all subdirs)
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+# Applies recursively
+*.test
+
+# Output of the go coverage tool
+# Applies recursively
+*.out
+
+# Dependency directories
+# Applies recursively
+vendor/
+
+# Go workspace file
+# Applies recursively (if found in subdirs, though usually at root)
+go.work
+
+# IDE specific files
+# Apply recursively
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS system files
+# Apply recursively
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
