@@ -6,12 +6,18 @@ import (
 	"github.com/go-chi/chi/v5"
 	"log"
 	"net/http"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
 const serverAddr = "127.0.0.1"
 const serverPort = "7777"
 
 func main() {
+
+	sigChan := make(chan os.Signal, 1)
+	signal.Notify(sigChan, os.Interrupt, syscall.SIGTERM)
 
 	r := chi.NewRouter()
 
@@ -28,8 +34,8 @@ func main() {
 		}
 	}()
 
-	fmt.Println("THIS WILL NEVER RUN!!")
+	<-sigChan
 
-	select {}
+	fmt.Println("Program will now exit.")
 
 }
