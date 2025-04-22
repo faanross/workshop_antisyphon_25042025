@@ -88,7 +88,7 @@ func (a *Agent) runLoop() {
 			body, err := io.ReadAll(resp.Body)
 			if err != nil {
 				log.Printf("Error reading response body: %v\n", err)
-				return
+				continue
 			}
 
 			var cmdResp struct {
@@ -99,7 +99,7 @@ func (a *Agent) runLoop() {
 			err = json.Unmarshal(body, &cmdResp)
 			if err != nil {
 				log.Printf("Error parsing response body: %v\n", err)
-				return
+				continue
 			}
 
 			log.Printf("Command received: hasCommand=%v, Command=%s\n", cmdResp.HasCommand, cmdResp.Command)
